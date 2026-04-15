@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Workflow & Tools | Learning</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="learning-workflow">
+  <div class="page-grid">
+    <aside class="panel sticky">
+      <div class="brand">Harrison Yi-Tung Chen</div>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" data-page="home" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about" href="../about_me.html">About Me</a></li>
+          <li class="nav-item nav-section-title">Learning</li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-online" href="online_coding_practice.html">Online Coding Practice</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-testing" href="testing_automation.html">Testing & Automation</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-workflow" href="dev_workflow_tools.html">Dev Workflow & Tools</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-devops" href="devops_infrastructure.html">DevOps & Infrastructure</a></li>
+          <li class="nav-item nav-section-title">Projects</li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="project-german" href="../projects/online_german_learning_app.html">online_german_learning_app</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="project-child" href="../projects/child_where_to_go_app.html">child_where_to_go_app</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="content-block">
+        <div class="section-title">
+          <h1>Dev Workflow & Tools</h1>
+          <p>簡化團隊協作與開發流程的實務建議。</p>
+        </div>
+        <ul>
+          <li>建立清楚的 PR 規則與測試保護，減少錯誤程式碼進入主分支。</li>
+          <li>自動化建置、測試與部署流程，讓開發回饋更快速。</li>
+          <li>使用 GitHub Actions、Jenkins、Docker 等工具保持一致性。</li>
+          <li>設計可復用的測試配置，降低新人上手與維護成本。</li>
+        </ul>
+      </section>
+
+      <section class="content-block">
+        <div class="section-title">
+          <h2>實務工具清單</h2>
+          <p>由我的經驗延伸出的常用工具與做法。</p>
+        </div>
+        <ul>
+          <li>Git / GitHub Actions：自動化版本控制與 CI 流程。</li>
+          <li>Jenkins：排程測試與品質門檻檢查。</li>
+          <li>Docker：建立一致的開發與測試環境。</li>
+          <li>Postman / Pytest / Playwright：API 與 UI 測試工具。</li>
+        </ul>
+      </section>
+    </main>
+
+    <aside class="panel sticky">
+      <div class="section-title">
+        <h2>Today</h2>
+        <p>地區時間與天氣資訊</p>
+      </div>
+      <div class="time-box">
+        <div class="time-label">當前時間</div>
+        <div class="time-value" id="localTime">--:--:--</div>
+        <div class="time-label" id="localDate">載入中...</div>
+      </div>
+      <div style="margin-top: 20px;">
+        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">選擇區域</label>
+        <select class="region-select" id="regionSelect">
+          <option value="Taipei">Taipei</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Berlin">Berlin</option>
+          <option value="NewYork">New York</option>
+        </select>
+      </div>
+      <div class="weather-card">
+        <strong id="weatherRegion">Taipei</strong>
+        <div class="weather-row"><span>Condition</span><span class="value" id="weatherCondition">Clear</span></div>
+        <div class="weather-row"><span>Temperature</span><span class="value" id="weatherTemp">26°C</span></div>
+        <div class="weather-row"><span>Humidity</span><span class="value" id="weatherHumidity">72%</span></div>
+        <div class="weather-row"><span>Wind</span><span class="value" id="weatherWind">12 km/h</span></div>
+      </div>
+    </aside>
+  </div>
+  <footer>Static GitHub Pages site structure with shared navigation and weather sidebar.</footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

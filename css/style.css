@@ -1,0 +1,215 @@
+:root {
+  --bg: #eef5fc;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #59657a;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.12);
+  --border: #d7e0ed;
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #eef5fc 0%, #f9fbff 100%);
+  color: var(--text);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.page-grid {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 320px;
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+.panel.sticky {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+.brand {
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.nav-list,
+.sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item,
+.sub-item {
+  margin-bottom: 10px;
+}
+.nav-link,
+.sub-nav-link,
+.region-select {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: #f8fbff;
+  color: var(--text);
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.nav-link:hover,
+.sub-nav-link:hover,
+.region-select:hover {
+  background: #eef4ff;
+}
+.nav-link.active,
+.sub-nav-link.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.sub-list {
+  margin-top: 6px;
+  padding-left: 14px;
+}
+.nav-section-title {
+  margin: 20px 0 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.content {
+  display: grid;
+  gap: 20px;
+}
+.content-block {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  min-height: 280px;
+}
+.section-title {
+  margin: 0 0 18px;
+}
+.section-title h1,
+.section-title h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+}
+.section-title p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  max-width: 720px;
+}
+.card-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.card-link {
+  display: block;
+  background: #f8fbff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.card-link:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+}
+.card-link h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+.card-link p {
+  margin: 0;
+  color: var(--muted);
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef4ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.82rem;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+.time-box {
+  display: grid;
+  gap: 10px;
+}
+.time-label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.time-value {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.weather-card {
+  background: var(--accent-soft);
+  border-radius: 22px;
+  padding: 18px;
+  margin-top: 20px;
+}
+.weather-card strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.weather-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  margin-top: 12px;
+}
+.weather-row span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.weather-row .value {
+  color: var(--text);
+  font-weight: 600;
+}
+footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 18px 24px 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+@media (max-width: 1120px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+  .panel.sticky {
+    position: static;
+    top: auto;
+  }
+}

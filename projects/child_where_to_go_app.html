@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>child_where_to_go_app | Projects</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="project-child">
+  <div class="page-grid">
+    <aside class="panel sticky">
+      <div class="brand">Harrison Yi-Tung Chen</div>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" data-page="home" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about" href="../about_me.html">About Me</a></li>
+          <li class="nav-item nav-section-title">Learning</li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-online" href="../learning/online_coding_practice.html">Online Coding Practice</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-testing" href="../learning/testing_automation.html">Testing & Automation</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-workflow" href="../learning/dev_workflow_tools.html">Dev Workflow & Tools</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-devops" href="../learning/devops_infrastructure.html">DevOps & Infrastructure</a></li>
+          <li class="nav-item nav-section-title">Projects</li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="project-german" href="online_german_learning_app.html">online_german_learning_app</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="project-child" href="child_where_to_go_app.html">child_where_to_go_app</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="content-block">
+        <div class="section-title">
+          <h1>child_where_to_go_app</h1>
+          <p>親子活動推薦應用。</p>
+        </div>
+        <p>這個專案提供家長與照顧者簡單的活動推薦，幫助他們快速找到適合兒童的景點與活動。</p>
+        <ul>
+          <li>規劃功能：地點建議、活動分類、親子友善標籤、簡易查詢。</li>
+          <li>設計重點：直觀操作、適合週末出遊、方便快速規劃。</li>
+          <li>延伸想法：整合天氣與地圖資訊，讓使用者查詢前可以先掌握當日狀況。</li>
+        </ul>
+      </section>
+
+      <section class="content-block">
+        <div class="section-title">
+          <h2>專案價值</h2>
+          <p>幫助家庭更輕鬆找到適合孩子的出遊地點。</p>
+        </div>
+        <ul>
+          <li>讓家長快速查詢適合不同年齡層的活動與場地。</li>
+          <li>提供清楚的活動分類，減少決策成本。</li>
+          <li>可擴充成家庭出遊規劃工具，增加實用性與黏著度。</li>
+        </ul>
+      </section>
+    </main>
+
+    <aside class="panel sticky">
+      <div class="section-title">
+        <h2>Today</h2>
+        <p>地區時間與天氣資訊</p>
+      </div>
+      <div class="time-box">
+        <div class="time-label">當前時間</div>
+        <div class="time-value" id="localTime">--:--:--</div>
+        <div class="time-label" id="localDate">載入中...</div>
+      </div>
+      <div style="margin-top: 20px;">
+        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">選擇區域</label>
+        <select class="region-select" id="regionSelect">
+          <option value="Taipei">Taipei</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Berlin">Berlin</option>
+          <option value="NewYork">New York</option>
+        </select>
+      </div>
+      <div class="weather-card">
+        <strong id="weatherRegion">Taipei</strong>
+        <div class="weather-row"><span>Condition</span><span class="value" id="weatherCondition">Clear</span></div>
+        <div class="weather-row"><span>Temperature</span><span class="value" id="weatherTemp">26°C</span></div>
+        <div class="weather-row"><span>Humidity</span><span class="value" id="weatherHumidity">72%</span></div>
+        <div class="weather-row"><span>Wind</span><span class="value" id="weatherWind">12 km/h</span></div>
+      </div>
+    </aside>
+  </div>
+  <footer>Static GitHub Pages site structure with shared navigation and weather sidebar.</footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

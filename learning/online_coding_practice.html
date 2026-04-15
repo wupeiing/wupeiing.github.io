@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Coding Practice | Learning</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="learning-online">
+  <div class="page-grid">
+    <aside class="panel sticky">
+      <div class="brand">Harrison Yi-Tung Chen</div>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" data-page="home" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about" href="../about_me.html">About Me</a></li>
+          <li class="nav-item nav-section-title">Learning</li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-online" href="online_coding_practice.html">Online Coding Practice</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-testing" href="testing_automation.html">Testing & Automation</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-workflow" href="dev_workflow_tools.html">Dev Workflow & Tools</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="learning-devops" href="devops_infrastructure.html">DevOps & Infrastructure</a></li>
+          <li class="nav-item nav-section-title">Projects</li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="project-german" href="../projects/online_german_learning_app.html">online_german_learning_app</a></li>
+          <li class="sub-item"><a class="sub-nav-link" data-page="project-child" href="../projects/child_where_to_go_app.html">child_where_to_go_app</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="content-block">
+        <div class="section-title">
+          <h1>Online Coding Practice</h1>
+          <p>線上刷題與演算法訓練策略。</p>
+        </div>
+        <ul>
+          <li>建立題目分類習慣：陣列、字串、動態規劃、圖形、雙指標等。</li>
+          <li>先閱讀題目與限制，再手動模擬範例與邊界情境。</li>
+          <li>先寫簡單可行解，再逐步優化時間與空間複雜度。</li>
+          <li>用筆記整理每個題目的關鍵思路與模板，方便複習。</li>
+        </ul>
+      </section>
+
+      <section class="content-block">
+        <div class="section-title">
+          <h2>實作習慣</h2>
+          <p>從 LeetCode / HackerRank 習得的練習方法。</p>
+        </div>
+        <ul>
+          <li>標記題目類型與討論常見解法。</li>
+          <li>用定時練習保持穩定進度，避免一次刷太多但沒有吸收。</li>
+          <li>把解題過程寫成「問題分類＋解法選擇＋優化思考」的筆記。</li>
+          <li>週期性回顧已解題目，鞏固演算法模式。</li>
+        </ul>
+      </section>
+    </main>
+
+    <aside class="panel sticky">
+      <div class="section-title">
+        <h2>Today</h2>
+        <p>地區時間與天氣資訊</p>
+      </div>
+      <div class="time-box">
+        <div class="time-label">當前時間</div>
+        <div class="time-value" id="localTime">--:--:--</div>
+        <div class="time-label" id="localDate">載入中...</div>
+      </div>
+      <div style="margin-top: 20px;">
+        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">選擇區域</label>
+        <select class="region-select" id="regionSelect">
+          <option value="Taipei">Taipei</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Berlin">Berlin</option>
+          <option value="NewYork">New York</option>
+        </select>
+      </div>
+      <div class="weather-card">
+        <strong id="weatherRegion">Taipei</strong>
+        <div class="weather-row"><span>Condition</span><span class="value" id="weatherCondition">Clear</span></div>
+        <div class="weather-row"><span>Temperature</span><span class="value" id="weatherTemp">26°C</span></div>
+        <div class="weather-row"><span>Humidity</span><span class="value" id="weatherHumidity">72%</span></div>
+        <div class="weather-row"><span>Wind</span><span class="value" id="weatherWind">12 km/h</span></div>
+      </div>
+    </aside>
+  </div>
+  <footer>Static GitHub Pages site structure with shared navigation and weather sidebar.</footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
