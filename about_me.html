@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,14 @@
   <div class="page-grid">
     <aside class="panel sticky">
       <div class="brand">Harrison Yi-Tung Chen</div>
+      <div class="profile-frame">
+        <img class="profile-image" src="images/profile_pic.jpeg" alt="Profile Photo">
+        <div class="frame-title">eng or ang?</div>
+        <div class="frame-subtitle">1% every day still gets you to 100%</div>
+      </div>
       <nav>
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" data-page="home" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" data-page="about" href="about_me.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about" href="index.html">About Me</a></li>
           <li class="nav-item nav-section-title">Learning</li>
           <li class="sub-item"><a class="sub-nav-link" data-page="learning-online" href="learning/online_coding_practice.html">Online Coding Practice</a></li>
           <li class="sub-item"><a class="sub-nav-link" data-page="learning-testing" href="learning/testing_automation.html">Testing & Automation</a></li>
@@ -30,34 +34,46 @@
       <section class="content-block">
         <div class="section-title">
           <h1>About Me</h1>
-          <p>從我的履歷與經驗整理出的專長與能力。</p>
+          <p>A summary of my resume highlights and expertise.</p>
         </div>
-        <p>我是 Harrison Yi-Tung Chen，一位擁有超過 10 年經驗的軟體工程師與 SDET。我專注於測試自動化、後端系統設計、以及雲端與 CI/CD 相關的工程實作。</p>
+        <p>I am Harrison Yi-Tung Chen, a software engineer and SDET with over 10 years of experience. I focus on test automation, backend system design, and cloud / CI/CD engineering.</p>
         <div>
           <span class="badge">AI Automation</span>
           <span class="badge">Testing & QA</span>
           <span class="badge">Cloud / AWS</span>
           <span class="badge">DevOps</span>
         </div>
-        <h2>核心能力</h2>
+        <h2>Core Strengths</h2>
         <ul>
-          <li>架構自動化測試平台，整合 CI/CD 與 AI Agent 自動生成 E2E 場景。</li>
-          <li>使用 Pytest、Playwright、Selenium、TestNG 等工具建立穩定的回歸測試。</li>
-          <li>設計 AWS Lambda、ECS、DynamoDB、CloudFormation、Kubernetes 的雲端部署方案。</li>
-          <li>與跨國團隊協作，優化開發流程、提高測試覆蓋與縮短發佈風險。</li>
+          <li>Architected automated test platforms that integrate CI/CD and AI Agents for generating E2E scenarios.</li>
+          <li>Built stable regression suites with Pytest, Playwright, Selenium, and TestNG.</li>
+          <li>Designed cloud deployment solutions using AWS Lambda, ECS, DynamoDB, CloudFormation, and Kubernetes.</li>
+          <li>Collaborated with global teams to improve development workflows, increase test coverage, and reduce release risk.</li>
         </ul>
       </section>
 
       <section class="content-block">
         <div class="section-title">
-          <h2>工作經歷摘要</h2>
-          <p>根據履歷中的職務與成果。</p>
+          <h2>Experience Highlights</h2>
+          <p>Summary of roles and achievements from my resume.</p>
         </div>
         <ul>
-          <li>Appier：打造自助式 AI Agent 平台，於 PR 階段自動生成跨 repo E2E 測試，並提前發現關鍵缺陷。</li>
-          <li>Netskope：建立 Pytest 測試框架與自動化管線，提高回歸測試效率約 25%。</li>
-          <li>Trend Micro：開發 Go / Java 服務、整合 VMware 與 AWS IoT，並改善生產問題偵測。</li>
-          <li>AAEON：負責 Linux / WinCE / Android 板卡 OS 移植與 IoT 應用開發。</li>
+          <li>Appier: Built a self-service AI Agent platform for automatically generating cross-repo E2E tests during PRs and detecting critical issues early.</li>
+          <li>Netskope: Developed a Pytest framework and automated pipeline, improving regression efficiency by about 25%.</li>
+          <li>Trend Micro: Created Go / Java services, integrated VMware and AWS IoT, and improved production issue detection.</li>
+          <li>AAEON: Delivered OS porting for Linux / WinCE / Android boards and developed IoT applications.</li>
+        </ul>
+      </section>
+
+      <section class="content-block">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Reach out or view my technical profiles online.</p>
+        </div>
+        <ul>
+          <li>Email: <a href="mailto:wupeiing@gmail.com">wupeiing@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/harrison-chen-542608154/" target="_blank" rel="noreferrer">linkedin.com/in/harrison-chen-542608154</a></li>
+          <li>LeetCode: <a href="https://leetcode.com/u/wupeiing/" target="_blank" rel="noreferrer">leetcode.com/u/wupeiing</a></li>
         </ul>
       </section>
     </main>
@@ -65,32 +81,104 @@
     <aside class="panel sticky">
       <div class="section-title">
         <h2>Today</h2>
-        <p>地區時間與天氣資訊</p>
+        <p>Regional time information.</p>
       </div>
       <div class="time-box">
-        <div class="time-label">當前時間</div>
+        <div class="time-label">Current time</div>
         <div class="time-value" id="localTime">--:--:--</div>
-        <div class="time-label" id="localDate">載入中...</div>
+        <div class="time-label" id="localDate">Loading...</div>
       </div>
       <div style="margin-top: 20px;">
-        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">選擇區域</label>
+        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">Select region</label>
         <select class="region-select" id="regionSelect">
-          <option value="Taipei">Taipei</option>
-          <option value="Tokyo">Tokyo</option>
-          <option value="Berlin">Berlin</option>
-          <option value="NewYork">New York</option>
+          <optgroup label="Asia">
+            <option value="Asia/Taipei">Taiwan</option>
+            <option value="Asia/Tokyo">Japan</option>
+            <option value="Asia/Seoul">South Korea</option>
+            <option value="Asia/Shanghai">China</option>
+            <option value="Asia/Kolkata">India</option>
+            <option value="Asia/Singapore">Singapore</option>
+            <option value="Asia/Bangkok">Thailand</option>
+            <option value="Asia/Kuala_Lumpur">Malaysia</option>
+            <option value="Asia/Jakarta">Indonesia</option>
+            <option value="Asia/Ho_Chi_Minh">Vietnam</option>
+            <option value="Asia/Manila">Philippines</option>
+            <option value="Asia/Dubai">United Arab Emirates</option>
+          </optgroup>
+          <optgroup label="Europe">
+            <option value="Europe/London">United Kingdom</option>
+            <option value="Europe/Berlin">Germany</option>
+            <option value="Europe/Paris">France</option>
+            <option value="Europe/Madrid">Spain</option>
+            <option value="Europe/Rome">Italy</option>
+            <option value="Europe/Amsterdam">Netherlands</option>
+            <option value="Europe/Zurich">Switzerland</option>
+            <option value="Europe/Stockholm">Sweden</option>
+            <option value="Europe/Warsaw">Poland</option>
+            <option value="Europe/Moscow">Russia</option>
+            <option value="Europe/Prague">Czech Republic</option>
+            <option value="Europe/Athens">Greece</option>
+          </optgroup>
+          <optgroup label="Africa">
+            <option value="Africa/Johannesburg">South Africa</option>
+            <option value="Africa/Cairo">Egypt</option>
+            <option value="Africa/Lagos">Nigeria</option>
+            <option value="Africa/Nairobi">Kenya</option>
+            <option value="Africa/Casablanca">Morocco</option>
+            <option value="Africa/Accra">Ghana</option>
+            <option value="Africa/Dar_es_Salaam">Tanzania</option>
+            <option value="Africa/Addis_Ababa">Ethiopia</option>
+            <option value="Africa/Kampala">Uganda</option>
+            <option value="Africa/Algiers">Algeria</option>
+            <option value="Africa/Tunis">Tunisia</option>
+            <option value="Africa/Dakar">Senegal</option>
+          </optgroup>
+          <optgroup label="North America">
+            <option value="America/New_York">United States</option>
+            <option value="America/Toronto">Canada</option>
+            <option value="America/Mexico_City">Mexico</option>
+            <option value="America/Havana">Cuba</option>
+            <option value="America/Jamaica">Jamaica</option>
+            <option value="America/Belize">Belize</option>
+            <option value="America/Panama">Panama</option>
+            <option value="America/Guatemala">Guatemala</option>
+            <option value="America/El_Salvador">El Salvador</option>
+            <option value="America/Tegucigalpa">Honduras</option>
+            <option value="America/Santo_Domingo">Dominican Republic</option>
+            <option value="America/Los_Angeles">United States (West Coast)</option>
+          </optgroup>
+          <optgroup label="South America">
+            <option value="America/Sao_Paulo">Brazil</option>
+            <option value="America/Argentina/Buenos_Aires">Argentina</option>
+            <option value="America/Santiago">Chile</option>
+            <option value="America/Lima">Peru</option>
+            <option value="America/Bogota">Colombia</option>
+            <option value="America/Montevideo">Uruguay</option>
+            <option value="America/Guayaquil">Ecuador</option>
+            <option value="America/La_Paz">Bolivia</option>
+            <option value="America/Asuncion">Paraguay</option>
+            <option value="America/Caracas">Venezuela</option>
+            <option value="America/Guyana">Guyana</option>
+            <option value="America/Paramaribo">Suriname</option>
+          </optgroup>
+          <optgroup label="Oceania">
+            <option value="Australia/Sydney">Australia</option>
+            <option value="Pacific/Auckland">New Zealand</option>
+            <option value="Pacific/Fiji">Fiji</option>
+            <option value="Pacific/Port_Moresby">Papua New Guinea</option>
+            <option value="Pacific/Apia">Samoa</option>
+            <option value="Pacific/Tongatapu">Tonga</option>
+            <option value="Pacific/Efate">Vanuatu</option>
+            <option value="Pacific/Guadalcanal">Solomon Islands</option>
+            <option value="Pacific/Noumea">New Caledonia</option>
+            <option value="Pacific/Pohnpei">Micronesia</option>
+            <option value="Pacific/Kiritimati">Kiribati</option>
+          </optgroup>
         </select>
-      </div>
-      <div class="weather-card">
-        <strong id="weatherRegion">Taipei</strong>
-        <div class="weather-row"><span>Condition</span><span class="value" id="weatherCondition">Clear</span></div>
-        <div class="weather-row"><span>Temperature</span><span class="value" id="weatherTemp">26°C</span></div>
-        <div class="weather-row"><span>Humidity</span><span class="value" id="weatherHumidity">72%</span></div>
-        <div class="weather-row"><span>Wind</span><span class="value" id="weatherWind">12 km/h</span></div>
       </div>
     </aside>
   </div>
-  <footer>Static GitHub Pages site structure with shared navigation and weather sidebar.</footer>
+  <footer>Static GitHub Pages site structure with shared navigation sidebar.</footer>
   <script src="js/main.js"></script>
 </body>
 </html>

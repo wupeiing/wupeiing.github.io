@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,14 @@
   <div class="page-grid">
     <aside class="panel sticky">
       <div class="brand">Harrison Yi-Tung Chen</div>
+      <div class="profile-frame">
+        <img class="profile-image" src="images/profile_pic.jpeg" alt="Profile Photo">
+        <div class="frame-title">eng or ang?</div>
+        <div class="frame-subtitle">1% every day still gets you to 100%</div>
+      </div>
       <nav>
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" data-page="home" href="../index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" data-page="about" href="../about_me.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about" href="../index.html">About Me</a></li>
           <li class="nav-item nav-section-title">Learning</li>
           <li class="sub-item"><a class="sub-nav-link" data-page="learning-online" href="../learning/online_coding_practice.html">Online Coding Practice</a></li>
           <li class="sub-item"><a class="sub-nav-link" data-page="learning-testing" href="../learning/testing_automation.html">Testing & Automation</a></li>
@@ -30,25 +34,25 @@
       <section class="content-block">
         <div class="section-title">
           <h1>online_german_learning_app</h1>
-          <p>德語學習專案，針對單字、文法與練習設計。</p>
+          <p>A German learning project focused on vocabulary, grammar, and exercises.</p>
         </div>
-        <p>這個專案是為初學者設計的德語學習平台，讓使用者可以透過簡單的卡片與練習題目快速累積詞彙量與語法理解。</p>
+        <p>This project is designed for beginners to learn German through simple cards and practice questions. Users can build vocabulary and grammar understanding through easy exercises.</p>
         <ul>
-          <li>功能規劃：單字卡、例句、文法重點、每日複習。</li>
-          <li>強調易用性：短篇練習、可視化進度、重複記憶機制。</li>
-          <li>後續可擴展：聽力練習、測驗模式、語音辨識回饋。</li>
+          <li>Feature planning: vocabulary cards, example sentences, grammar highlights, and daily review.</li>
+          <li>Emphasizes ease of use with short practice sessions, progress tracking, and spaced repetition.</li>
+          <li>Future expansion: listening practice, quiz mode, and voice recognition feedback.</li>
         </ul>
       </section>
 
       <section class="content-block">
         <div class="section-title">
-          <h2>專案價值</h2>
-          <p>適合想要每天花少量時間學習語言的人。</p>
+          <h2>Project Value</h2>
+          <p>Designed for learners who want daily language practice in short sessions.</p>
         </div>
         <ul>
-          <li>用簡潔的介面降低學習門檻，讓使用者專注在學習內容。</li>
-          <li>提供系統化筆記與複習流程，幫助記憶新單字。</li>
-          <li>可整合成語言學習作品，展示產品思維與使用者價值。</li>
+          <li>Use a simple interface to reduce learning friction and keep focus on content.</li>
+          <li>Provide systematic notes and review workflows to help memorize new vocabulary.</li>
+          <li>Can be showcased as a language learning product demonstrating product thinking and user value.</li>
         </ul>
       </section>
     </main>
@@ -56,32 +60,104 @@
     <aside class="panel sticky">
       <div class="section-title">
         <h2>Today</h2>
-        <p>地區時間與天氣資訊</p>
+        <p>Regional time information.</p>
       </div>
       <div class="time-box">
-        <div class="time-label">當前時間</div>
+        <div class="time-label">Current time</div>
         <div class="time-value" id="localTime">--:--:--</div>
-        <div class="time-label" id="localDate">載入中...</div>
+        <div class="time-label" id="localDate">Loading...</div>
       </div>
       <div style="margin-top: 20px;">
-        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">選擇區域</label>
+        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">Select region</label>
         <select class="region-select" id="regionSelect">
-          <option value="Taipei">Taipei</option>
-          <option value="Tokyo">Tokyo</option>
-          <option value="Berlin">Berlin</option>
-          <option value="NewYork">New York</option>
+          <optgroup label="Asia">
+            <option value="Asia/Taipei">Taiwan</option>
+            <option value="Asia/Tokyo">Japan</option>
+            <option value="Asia/Seoul">South Korea</option>
+            <option value="Asia/Shanghai">China</option>
+            <option value="Asia/Kolkata">India</option>
+            <option value="Asia/Singapore">Singapore</option>
+            <option value="Asia/Bangkok">Thailand</option>
+            <option value="Asia/Kuala_Lumpur">Malaysia</option>
+            <option value="Asia/Jakarta">Indonesia</option>
+            <option value="Asia/Ho_Chi_Minh">Vietnam</option>
+            <option value="Asia/Manila">Philippines</option>
+            <option value="Asia/Dubai">United Arab Emirates</option>
+          </optgroup>
+          <optgroup label="Europe">
+            <option value="Europe/London">United Kingdom</option>
+            <option value="Europe/Berlin">Germany</option>
+            <option value="Europe/Paris">France</option>
+            <option value="Europe/Madrid">Spain</option>
+            <option value="Europe/Rome">Italy</option>
+            <option value="Europe/Amsterdam">Netherlands</option>
+            <option value="Europe/Zurich">Switzerland</option>
+            <option value="Europe/Stockholm">Sweden</option>
+            <option value="Europe/Warsaw">Poland</option>
+            <option value="Europe/Moscow">Russia</option>
+            <option value="Europe/Prague">Czech Republic</option>
+            <option value="Europe/Athens">Greece</option>
+          </optgroup>
+          <optgroup label="Africa">
+            <option value="Africa/Johannesburg">South Africa</option>
+            <option value="Africa/Cairo">Egypt</option>
+            <option value="Africa/Lagos">Nigeria</option>
+            <option value="Africa/Nairobi">Kenya</option>
+            <option value="Africa/Casablanca">Morocco</option>
+            <option value="Africa/Accra">Ghana</option>
+            <option value="Africa/Dar_es_Salaam">Tanzania</option>
+            <option value="Africa/Addis_Ababa">Ethiopia</option>
+            <option value="Africa/Kampala">Uganda</option>
+            <option value="Africa/Algiers">Algeria</option>
+            <option value="Africa/Tunis">Tunisia</option>
+            <option value="Africa/Dakar">Senegal</option>
+          </optgroup>
+          <optgroup label="North America">
+            <option value="America/New_York">United States</option>
+            <option value="America/Toronto">Canada</option>
+            <option value="America/Mexico_City">Mexico</option>
+            <option value="America/Havana">Cuba</option>
+            <option value="America/Jamaica">Jamaica</option>
+            <option value="America/Belize">Belize</option>
+            <option value="America/Panama">Panama</option>
+            <option value="America/Guatemala">Guatemala</option>
+            <option value="America/El_Salvador">El Salvador</option>
+            <option value="America/Tegucigalpa">Honduras</option>
+            <option value="America/Santo_Domingo">Dominican Republic</option>
+            <option value="America/Los_Angeles">United States (West Coast)</option>
+          </optgroup>
+          <optgroup label="South America">
+            <option value="America/Sao_Paulo">Brazil</option>
+            <option value="America/Argentina/Buenos_Aires">Argentina</option>
+            <option value="America/Santiago">Chile</option>
+            <option value="America/Lima">Peru</option>
+            <option value="America/Bogota">Colombia</option>
+            <option value="America/Montevideo">Uruguay</option>
+            <option value="America/Guayaquil">Ecuador</option>
+            <option value="America/La_Paz">Bolivia</option>
+            <option value="America/Asuncion">Paraguay</option>
+            <option value="America/Caracas">Venezuela</option>
+            <option value="America/Guyana">Guyana</option>
+            <option value="America/Paramaribo">Suriname</option>
+          </optgroup>
+          <optgroup label="Oceania">
+            <option value="Australia/Sydney">Australia</option>
+            <option value="Pacific/Auckland">New Zealand</option>
+            <option value="Pacific/Fiji">Fiji</option>
+            <option value="Pacific/Port_Moresby">Papua New Guinea</option>
+            <option value="Pacific/Apia">Samoa</option>
+            <option value="Pacific/Tongatapu">Tonga</option>
+            <option value="Pacific/Efate">Vanuatu</option>
+            <option value="Pacific/Guadalcanal">Solomon Islands</option>
+            <option value="Pacific/Noumea">New Caledonia</option>
+            <option value="Pacific/Pohnpei">Micronesia</option>
+            <option value="Pacific/Kiritimati">Kiribati</option>
+          </optgroup>
         </select>
-      </div>
-      <div class="weather-card">
-        <strong id="weatherRegion">Taipei</strong>
-        <div class="weather-row"><span>Condition</span><span class="value" id="weatherCondition">Clear</span></div>
-        <div class="weather-row"><span>Temperature</span><span class="value" id="weatherTemp">26°C</span></div>
-        <div class="weather-row"><span>Humidity</span><span class="value" id="weatherHumidity">72%</span></div>
-        <div class="weather-row"><span>Wind</span><span class="value" id="weatherWind">12 km/h</span></div>
       </div>
     </aside>
   </div>
-  <footer>Static GitHub Pages site structure with shared navigation and weather sidebar.</footer>
+  <footer>Static GitHub Pages site structure with shared navigation  sidebar.</footer>
   <script src="../js/main.js"></script>
 </body>
 </html>

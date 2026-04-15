@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,14 @@
   <div class="page-grid">
     <aside class="panel sticky">
       <div class="brand">Harrison Yi-Tung Chen</div>
+      <div class="profile-frame">
+        <img class="profile-image" src="images/profile_pic.jpeg" alt="Profile Photo">
+        <div class="frame-title">eng or ang?</div>
+        <div class="frame-subtitle">1% every day still gets you to 100%</div>
+      </div>
       <nav>
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" data-page="home" href="../index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" data-page="about" href="../about_me.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about" href="../index.html">About Me</a></li>
           <li class="nav-item nav-section-title">Learning</li>
           <li class="sub-item"><a class="sub-nav-link" data-page="learning-online" href="online_coding_practice.html">Online Coding Practice</a></li>
           <li class="sub-item"><a class="sub-nav-link" data-page="learning-testing" href="testing_automation.html">Testing & Automation</a></li>
@@ -30,26 +34,26 @@
       <section class="content-block">
         <div class="section-title">
           <h1>Testing & Automation</h1>
-          <p>測試自動化的實務經驗與設計思維。</p>
+          <p>Practical experience and design thinking for test automation.</p>
         </div>
         <ul>
-          <li>建立穩定的 End-to-End 測試框架，使用 Pytest、Playwright 與 Selenium。</li>
-          <li>設計可維護的回歸測試流程，並將測試結果整合到 CI/CD 中。</li>
-          <li>使用 Git 集成的測試覆蓋報告與 Jenkins 質量門檻，讓團隊掌握軟體品質。</li>
-          <li>建構指標與監控訊號，提前偵測生產問題並降低 P1 事件。</li>
+          <li>Built stable End-to-End test frameworks using Pytest, Playwright, and Selenium.</li>
+          <li>Designed maintainable regression testing workflows and integrated results into CI/CD.</li>
+          <li>Used Git-integrated coverage reporting and Jenkins quality gates to maintain software quality.</li>
+          <li>Built monitoring signals and metrics to detect production issues early and reduce P1 incidents.</li>
         </ul>
       </section>
 
       <section class="content-block">
         <div class="section-title">
-          <h2>自動化落地方式</h2>
-          <p>從實際履歷內容延伸出的作法。</p>
+          <h2>Automation Practices</h2>
+          <p>Approaches derived from real resume experience.</p>
         </div>
         <ul>
-          <li>用 AI Agent 自動生成場景腳本，降低人工測試成本。</li>
-          <li>打造自癒式 UI 自動化，減少測試維護負擔。</li>
-          <li>從端到端到 API 測試，建立完整測試覆蓋。</li>
-          <li>持續追蹤測試效率與缺陷發現率，作為品質改進依據。</li>
+          <li>Use AI Agents to automatically generate test scenarios and reduce manual test costs.</li>
+          <li>Build self-healing UI automation to reduce maintenance overhead.</li>
+          <li>Cover end-to-end and API testing to establish complete automation coverage.</li>
+          <li>Track automation efficiency and defect discovery rate for continuous quality improvement.</li>
         </ul>
       </section>
     </main>
@@ -57,32 +61,104 @@
     <aside class="panel sticky">
       <div class="section-title">
         <h2>Today</h2>
-        <p>地區時間與天氣資訊</p>
+        <p>Regional time  information.</p>
       </div>
       <div class="time-box">
-        <div class="time-label">當前時間</div>
+        <div class="time-label">Current time</div>
         <div class="time-value" id="localTime">--:--:--</div>
-        <div class="time-label" id="localDate">載入中...</div>
+        <div class="time-label" id="localDate">Loading...</div>
       </div>
       <div style="margin-top: 20px;">
-        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">選擇區域</label>
+        <label for="regionSelect" style="display:block; margin-bottom: 10px; font-weight: 600; color: var(--text);">Select region</label>
         <select class="region-select" id="regionSelect">
-          <option value="Taipei">Taipei</option>
-          <option value="Tokyo">Tokyo</option>
-          <option value="Berlin">Berlin</option>
-          <option value="NewYork">New York</option>
+          <optgroup label="Asia">
+            <option value="Asia/Taipei">Taiwan</option>
+            <option value="Asia/Tokyo">Japan</option>
+            <option value="Asia/Seoul">South Korea</option>
+            <option value="Asia/Shanghai">China</option>
+            <option value="Asia/Kolkata">India</option>
+            <option value="Asia/Singapore">Singapore</option>
+            <option value="Asia/Bangkok">Thailand</option>
+            <option value="Asia/Kuala_Lumpur">Malaysia</option>
+            <option value="Asia/Jakarta">Indonesia</option>
+            <option value="Asia/Ho_Chi_Minh">Vietnam</option>
+            <option value="Asia/Manila">Philippines</option>
+            <option value="Asia/Dubai">United Arab Emirates</option>
+          </optgroup>
+          <optgroup label="Europe">
+            <option value="Europe/London">United Kingdom</option>
+            <option value="Europe/Berlin">Germany</option>
+            <option value="Europe/Paris">France</option>
+            <option value="Europe/Madrid">Spain</option>
+            <option value="Europe/Rome">Italy</option>
+            <option value="Europe/Amsterdam">Netherlands</option>
+            <option value="Europe/Zurich">Switzerland</option>
+            <option value="Europe/Stockholm">Sweden</option>
+            <option value="Europe/Warsaw">Poland</option>
+            <option value="Europe/Moscow">Russia</option>
+            <option value="Europe/Prague">Czech Republic</option>
+            <option value="Europe/Athens">Greece</option>
+          </optgroup>
+          <optgroup label="Africa">
+            <option value="Africa/Johannesburg">South Africa</option>
+            <option value="Africa/Cairo">Egypt</option>
+            <option value="Africa/Lagos">Nigeria</option>
+            <option value="Africa/Nairobi">Kenya</option>
+            <option value="Africa/Casablanca">Morocco</option>
+            <option value="Africa/Accra">Ghana</option>
+            <option value="Africa/Dar_es_Salaam">Tanzania</option>
+            <option value="Africa/Addis_Ababa">Ethiopia</option>
+            <option value="Africa/Kampala">Uganda</option>
+            <option value="Africa/Algiers">Algeria</option>
+            <option value="Africa/Tunis">Tunisia</option>
+            <option value="Africa/Dakar">Senegal</option>
+          </optgroup>
+          <optgroup label="North America">
+            <option value="America/New_York">United States</option>
+            <option value="America/Toronto">Canada</option>
+            <option value="America/Mexico_City">Mexico</option>
+            <option value="America/Havana">Cuba</option>
+            <option value="America/Jamaica">Jamaica</option>
+            <option value="America/Belize">Belize</option>
+            <option value="America/Panama">Panama</option>
+            <option value="America/Guatemala">Guatemala</option>
+            <option value="America/El_Salvador">El Salvador</option>
+            <option value="America/Tegucigalpa">Honduras</option>
+            <option value="America/Santo_Domingo">Dominican Republic</option>
+            <option value="America/Los_Angeles">United States (West Coast)</option>
+          </optgroup>
+          <optgroup label="South America">
+            <option value="America/Sao_Paulo">Brazil</option>
+            <option value="America/Argentina/Buenos_Aires">Argentina</option>
+            <option value="America/Santiago">Chile</option>
+            <option value="America/Lima">Peru</option>
+            <option value="America/Bogota">Colombia</option>
+            <option value="America/Montevideo">Uruguay</option>
+            <option value="America/Guayaquil">Ecuador</option>
+            <option value="America/La_Paz">Bolivia</option>
+            <option value="America/Asuncion">Paraguay</option>
+            <option value="America/Caracas">Venezuela</option>
+            <option value="America/Guyana">Guyana</option>
+            <option value="America/Paramaribo">Suriname</option>
+          </optgroup>
+          <optgroup label="Oceania">
+            <option value="Australia/Sydney">Australia</option>
+            <option value="Pacific/Auckland">New Zealand</option>
+            <option value="Pacific/Fiji">Fiji</option>
+            <option value="Pacific/Port_Moresby">Papua New Guinea</option>
+            <option value="Pacific/Apia">Samoa</option>
+            <option value="Pacific/Tongatapu">Tonga</option>
+            <option value="Pacific/Efate">Vanuatu</option>
+            <option value="Pacific/Guadalcanal">Solomon Islands</option>
+            <option value="Pacific/Noumea">New Caledonia</option>
+            <option value="Pacific/Pohnpei">Micronesia</option>
+            <option value="Pacific/Kiritimati">Kiribati</option>
+          </optgroup>
         </select>
-      </div>
-      <div class="weather-card">
-        <strong id="weatherRegion">Taipei</strong>
-        <div class="weather-row"><span>Condition</span><span class="value" id="weatherCondition">Clear</span></div>
-        <div class="weather-row"><span>Temperature</span><span class="value" id="weatherTemp">26°C</span></div>
-        <div class="weather-row"><span>Humidity</span><span class="value" id="weatherHumidity">72%</span></div>
-        <div class="weather-row"><span>Wind</span><span class="value" id="weatherWind">12 km/h</span></div>
       </div>
     </aside>
   </div>
-  <footer>Static GitHub Pages site structure with shared navigation and weather sidebar.</footer>
+  <footer>Static GitHub Pages site structure with shared navigation  sidebar.</footer>
   <script src="../js/main.js"></script>
 </body>
 </html>
